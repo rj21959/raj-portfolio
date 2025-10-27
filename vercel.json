@@ -2,20 +2,32 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.html",
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.jpg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.pdf", 
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.mp4",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/(.*\\.(jpg|jpeg|png|gif|pdf|mp4))",
+      "src": "/(.*\\.(jpg|jpeg|png|gif|pdf|mp4|json))",
       "headers": {
         "Cache-Control": "public, max-age=31536000, immutable"
       }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
