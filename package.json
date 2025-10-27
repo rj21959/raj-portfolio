@@ -1,0 +1,8 @@
+{
+  "name": "raj-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website",
+  "scripts": {
+    "build": "echo 'No build process needed'"
+  }
+}
